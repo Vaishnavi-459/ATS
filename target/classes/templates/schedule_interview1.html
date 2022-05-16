@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Schedule Interview</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+	<div class="container">
+
+		<img src="https://ingrain.us/images/logo.png" alt="logo" class="img-responsive">
+
+
+
+		<h2>
+			<center>
+
+				<div class="p-3 mb-2 bg-secondary text-white">
+					<centre>Schedule Interview
+				</div>
+		</h2>
+
+		<form action="/saveScheduleInterview" , method="post">
+
+			<table border="1">
+				<tr>
+					<td>Name</td>
+					<td><input type="text" placeholder="Name" name="candidatename" required /></td>
+				</tr>
+
+				<tr>
+					<td>Address</td>
+					<td><input type="text" placeholder="Address" name="emp_address" required /></td>
+				</tr>
+
+				<tr>
+					<td>Email</td>
+					<td><input type="text" placeholder="Email" name="emp_email" required /></td>
+				</tr>
+
+
+				<tr>
+					<td>JobTitle</td>
+					<td><input type="text" placeholder="JobTitle" name="jobTitle" required /></td>
+				</tr>
+
+
+
+
+				<tr>
+					<td>
+						<label for="">Interview Type </label></td>
+					<td><select class="form-control mb-12 col-12" name="interviewType" required>
+							<option value="" selected hidden>Select interviewtype</option>
+							<option value="Online">Online</option>
+							<option value="Walk-In-Drive">Walk-In-Drive</option>
+						</select>
+				</tr>
+				</td>
+
+				<tr>
+					<td>InterviewerName</td>
+					<td><input type="text" placeholder="InterviewerName" name="interviewerName" required /></td>
+				</tr>
+
+				<tr>
+					<td>
+						<label for="">Stages </label></td>
+					<td><select class="form-control mb-10 col-10" name="stages" required>
+							<option value="" selected hidden>Select stage</option>
+							<option value="TR Round">TR ROUND</option>
+							<option value="Hr Round">HR ROUND</option>
+						</select>
+				</tr>
+				</td>
+
+				<tr>
+					<td>InterviewDate</td>
+					<td><input type="text" placeholder="InterviewDate" name="interviewDate" required /></td>
+				</tr>
+
+				<tr>
+					<td>InterviewTime</td>
+					<td><input type="text" placeholder="InterviewTime" name="interviewTime" required /></td>
+				</tr>
+
+				<tr>
+					<td>InterviewDuration</td>
+					<td><input type="text" placeholder="InterviewDuration" name="interviewDuration" required /></td>
+				</tr>
+
+				<tr>
+					<td>Notes</td>
+					<td><input type="text" placeholder="Notes" name="notes" required /></td>
+				</tr>
+
+				<tr>
+					<td><input type="submit" value="Submit" /></td>
+				</tr>
+
+
+			</table>
+		</form>
+
+		<hr>
+	</div>
+
+
+	<hr>
+
+
+	<footer>
+		&nbsp; &nbsp;
+		<a th:href="@{/dashboard}" class="btn btn-info col-2"> Return to Dashboard </a><span class="navigationSpace" />
+		<a th:href="@{/listofapplicants}" class="btn btn-info col-2"> View List of Applicants </a>
+	</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Title of the document</title>
+<meta charset="UTF-8">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" rel="stylesheet">
+<link href="style.css" rel="stylesheet">
+<title>Carousel</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+</script>
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+	.clearfix {
+		clear: both;
+	}
+
+	.logo {
+		margin: 0px;
+		margin-left: 28px;
+		font-weight: bold;
+		color: white;
+		margin-bottom: 30px;
+	}
+
+	.logo span {
+		color: #f7403b;
+	}
+
+
+	.carousel-inner img {
+		width: 90%;
+		height: 540px;
+		margin-right: 142px;
+		margin-left: 26px;
+
+	}
+
+	h3 {
+		height: 100px;
+		margin-block-start: 20em;
+		margin-block-end: 10em;
+		margin-inline-start: -531px;
+		margin-inline-end: 0px;
+		position: absolute;
+		right: -6%;
+		bottom: 20px;
+		left: -11%;
+		z-index: 26;
+		padding-top: 45px;
+
+		color: #fff;
+		text-align: center;
+	}
+
+	h4 {
+		height: 100px;
+		margin-block-start: 20em;
+		margin-block-end: 5em;
+		margin-inline-start: -425px;
+		margin-inline-end: 0px;
+		position: absolute;
+		right: -6%;
+		bottom: 20px;
+		left: -27%;
+		z-index: 26;
+		padding-top: 45px;
+
+		color: #fff;
+		text-align: center;
+	}
+
+	.sidenav {
+		height: 100%;
+		width: 300px;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #008080;
+		overflow: hidden;
+		transition: 0.5s;
+		padding-top: 30px;
+	}
+
+	.sidenav a {
+		padding: 15px 8px 15px 32px;
+		text-decoration: none;
+		font-size: 20px;
+		color: #FFFFFF;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+		color: #f1f1f1;
+		background-color: #008080;
+	}
+
+	.sidenav {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+	}
+
+	#main {
+		transition: margin-left .5s;
+		padding: 16px;
+		margin-left: 300px;
+	}
+
+	.head {
+		padding: 20px;
+	}
+
+	.col-div-6 {
+		width: 50%;
+		float: left;
+	}
+
+	.profile {
+		display: inline-block;
+		float: right;
+		width: 160px;
+	}
+
+	.pro-img {
+		float: left;
+		width: 40px;
+		margin-top: 5px;
+	}
+
+	.profile p {
+		color: white;
+		font-weight: 500;
+		margin-left: 55px;
+		margin-top: 10px;
+		font-size: 13.5px;
+	}
+
+	.profile p span {
+		font-weight: 400;
+		font-size: 12px;
+		display: block;
+		color: #8e8b8b;
+	}
+
+	.col-div-3 {
+		width: 25%;
+		float: left;
+	}
+
+	.box {
+		width: 85%;
+		height: 100px;
+		background-color: #272c4a;
+		margin-left: 10px;
+		padding: 10px;
+	}
+
+	.box p {
+		font-size: 35px;
+		color: white;
+		font-weight: bold;
+		line-height: 30px;
+		padding-left: 10px;
+		margin-top: 20px;
+		display: inline-block;
+	}
+
+	.box p span {
+		font-size: 20px;
+		font-weight: 400;
+		color: #818181;
+	}
+
+
+	.content-box {
+		padding: 20px;
+	}
+
+	.content-box p {
+		margin: 0px;
+		font-size: 20px;
+		color: #f7403b;
+	}
+
+	.content-box p span {
+		float: right;
+		background-color: #ddd;
+		padding: 3px 10px;
+		font-size: 15px;
+	}
+
+	.box-8,
+	.box-4 {
+		width: 95%;
+		background-color: #272c4a;
+		height: 330px;
+
+	}
+
+	marquee {
+		font-size: 30px;
+		font-weight: 800;
+		color: #8ebf42;
+		font-family: sans-serif;
+	}
+
+	.nav2 {
+		display: none;
+	}
+
+	body {
+		margin: 0px;
+		padding: 0px;
+		background-color: #008080;
+		overflow: hidden;
+		font-family: system-ui;
+	}
+
+	.clearfix {
+		clear: both;
+	}
+
+	.logo {
+		margin: 0px;
+		margin-left: 28px;
+		font-weight: bold;
+		color: white;
+		margin-bottom: 30px;
+	}
+
+	.logo span {
+		color: #f7403b;
+	}
+
+	.sidenav {
+		height: 100%;
+		width: 300px;
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		background-color: #008080;
+		overflow: hidden;
+		transition: 0.5s;
+		padding-top: 30px;
+	}
+
+	.sidenav a {
+		padding: 15px 8px 15px 32px;
+		text-decoration: none;
+		font-size: 20px;
+		color: #27dae3;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+		color: #f1f1f1;
+		background-color: #1b203d;
+	}
+
+	.sidenav {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+	}
+
+	#main {
+		transition: margin-left .5s;
+		padding: 16px;
+		margin-left: 300px;
+	}
+
+	.head {
+		padding: 20px;
+	}
+
+	.nav2 {
+		display: none;
+	}
+
+	@keyframes fill {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(126deg);
+		}
+	}
+
+	.box-8 {
+		margin-left: 10px;
+	}
+
+	:root {
+		--darkbackground: #171717;
+		--lightbackground: #fff;
+		--black: #000;
+		--white: #fff;
+		--green: #0abf53;
+		--footer-color: #0e0e0e;
+		--bg-light: #0c0b0b;
+		--bg-color: #171717;
+		--font-light: #b7b7b7;
+		--scrollbarBG: #171717;
+		--thumbBG: #0abf53;
+	}
+
+	body::-webkit-scrollbar {
+		width: 11px;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		font-family: system-ui;
+	}
+
+	.container {
+		width: 1200px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.clearfix {
+		clear: both;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.col-div-3 {
+		width: 25%;
+		float: left;
+		position: relative;
+	}
+
+	.col-div-4 {
+		width: 33%;
+		float: left;
+		position: relative;
+	}
+
+	.col-div-5 {
+		width: 40%;
+		float: left;
+		position: relative;
+	}
+
+	.col-div-6 {
+		width: 50%;
+		float: left;
+		position: relative;
+	}
+
+	.col-div-7 {
+		width: 60%;
+		float: left;
+		position: relative;
+	}
+
+	.col-div-8 {
+		width: 87%;
+		float: left;
+		position: relative;
+	}
+
+	.top-header {
+		padding: 15px;
+		background: var(--bg-color);
+	}
+
+	.sticky {
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 9999999;
+	}
+
+	.hicon {
+		color: var(--white);
+		font-size: 20px;
+		height: 20px;
+		width: 20px;
+		margin-left: 30px;
+		cursor: pointer;
+	}
+
+	.p1 {
+		color: var(--white);
+		display: inline-block;
+	}
+
+	.anch1 {
+		color: var(--white);
+		text-decoration: none;
+	}
+
+	.social {
+		text-align: right;
+	}
+
+	.bottom-header {
+		background: var(--green);
+		padding: 30px;
+	}
+
+	.logo {
+		color: var(--white);
+		line-height: 60px;
+	}
+
+	.menu {
+		float: right;
+	}
+
+	.menu ul li {
+		list-style: none;
+		float: left;
+		padding: 20px;
+	}
+
+	.menu ul li a {
+		color: var(--white);
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+
+	h6 {
+		margin-bottom: -5.5rem;
+		line-height: 0.2;
+
+	}
+
+	.title-word {
+		animation: color-animation 4s linear infinite;
+	}
+
+	.title-word-1 {
+		--color-1: #efe214;
+		--color-2: #168EC2;
+		--color-3: #DE5E2D;
+	}
+
+	.title-word-2 {
+		--color-1: #DBAD4A;
+		--color-2: #ACCFCB;
+		--color-3: #17494D;
+	}
+
+	.title-word-3 {
+		--color-1: #ACCFCB;
+		--color-2: #DE5E2D;
+		--color-3: #ACCFCB;
+	}
+
+	.title-word-4 {
+		--color-1: #168EC2;
+		--color-2: #DF8453;
+		--color-3: #DE5E2D;
+	}
+
+	@keyframes color-animation {
+		0% {
+			color: var(--color-1)
+		}
+
+		32% {
+			color: var(--color-1)
+		}
+
+		33% {
+			color: var(--color-2)
+		}
+
+		65% {
+			color: var(--color-2)
+		}
+
+		66% {
+			color: var(--color-3)
+		}
+
+		99% {
+			color: var(--color-3)
+		}
+
+		100% {
+			color: var(--color-1)
+		}
+	}
+
+	/* Here are just some visual styles. 🖌 */
+	.container {
+		display: grid;
+		place-items: center;
+		text-align: center;
+		height: 100vh
+	}
+
+	.title {
+		font-family: "Montserrat", sans-serif;
+		font-weight: 1000;
+		font-size: 2.5vw;
+		text-transform: uppercase;
+	}
+</style>
+
+<body>
+	<div id="mySidenav" class="sidenav">
+		<img src="https://www.ingrain.us/images/logo.png"><br>
+		<a href="/listofapplicants" class="icon-a"><i class="fa fa-users icons"></i> &nbsp;&nbsp;List Of Candidates
+		</a>
+		<a href="/showNewEmployeeForm" class="icon-a"><i class="fa fa-user-plus"></i> &nbsp;&nbsp;Add candidate
+		</a>
+		<a href="/jobslist" class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;List of jobs
+		</a>
+		<a href="/add" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Schedule
+			Interviews
+		</a>
+		<a href="/check" class="icon-a"><i class="fa fa-tasks icons"></i> &nbsp;&nbsp;Scheduled Interviews
+		</a>
+		<a href="/totalfeedback" class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Feedback
+		</a>
+		<a href="/addfeedback" class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Add Feedback
+		</a>
+		<a href="/doct1" class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;List Of Documents
+		</a>
+		<a href="/doct" class="icon-a"><i class="fa fa-list-alt icons"></i> &nbsp;&nbsp;Add Candidate Attachments
+		</a>
+		<a href="/" class="icon-a"><i class=" fa fa-user icons"></i> &nbsp;&nbsp;logout
+		</a>
+	</div>
+
+	<div id="main">
+
+		<div class="head">
+			<div class="col-div-6">
+				<marquee bgcolor="orange" direction="right">
+					<div class="p-3 mb-2 bg-warning text-dark">
+						<h6>WELCOME TO INGRAIN SYSTEMS</H6>
+						<div>
+				</marquee>
+				<marquee bgcolor="yellow" direction="right">
+					<div class="p-3 mb-2 bg-warning text-dark">
+						<h6>Innovation of exllence</H6>
+						<div>
+				</marquee>
+				<span style="font-size:30px;cursor:pointer; color: white;" class="nav">&#9776; Dashboard</span>
+				<span style="font-size:30px;cursor:pointer; color: white;" class="nav2">&#9776; Dashboard</span>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+		<div id="GFG" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="https://www.ingrain.us/images/ba4.png" alt="GFG" width="500" height="500">
+
+					<div class="carousel-caption">
+						<h3 class="text-warning">
+							<span class="title-word title-word-1">Connect Anything <br> Any where</span>
+						</h3>
+						<h4>Today, our high skilled professionals providing <br> key services to<br> different client
+							throughout the US.</h4>
+					</div>
+				</div>
+
+				<div class="carousel-item">
+					<img src="https://www.ingrain.us/images/ba5.png">
+
+					<div class="carousel-caption">
+						<h3 class="text-warning">
+							<span class="title-word title-word-1">Connect Anything <br> Any where</span>
+						</h3>
+						<h4>Today, our high skilled professionals providing <br> key services to<br> different client
+							throughout the US.</h4>
+					</div>
+				</div>
+
+				<div class="carousel-item">
+
+					<img src="https://www.ingrain.us/images/ba4.png">
+
+					<div class="carousel-caption">
+						<h3 class="text-warning">
+							Connect Anything <br>Anywhere <br>
+							<h4>Today, our high skilled professionals providing<br> key services to<br> different client
+								throughout the US.</h4>
+						</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+
+		$(".nav").click(function () {
+			$("#mySidenav").css('width', '70px');
+			$("#main").css('margin-left', '70px');
+			$(".logo").css('visibility', 'hidden');
+			$(".logo span").css('visibility', 'visible');
+			$(".logo span").css('margin-left', '-10px');
+			$(".icon-a").css('visibility', 'hidden');
+			$(".icons").css('visibility', 'visible');
+			$(".icons").css('margin-left', '-8px');
+			$(".nav").css('display', 'none');
+			$(".nav2").css('display', 'block');
+		});
+
+		$(".nav2").click(function () {
+			$("#mySidenav").css('width', '300px');
+			$("#main").css('margin-left', '300px');
+			$(".logo").css('visibility', 'visible');
+			$(".icon-a").css('visibility', 'visible');
+			$(".icons").css('visibility', 'visible');
+			$(".nav").css('display', 'block');
+			$(".nav2").css('display', 'none');
+		});
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+ <title>Interview Feedback</title>
+<head>
+
+<style>
+
+h2{
+  font-family: Calibri;
+  font-size: 25pt;        
+  font-style: normal;
+  font-weight: bold;
+  color:SlateBlue;
+  text-align: center;
+  text-decoration: underline
+}
+
+table{
+  font-family: Calibri;
+  color:white;
+  font-size: 11pt;
+  font-style: normal;
+  font-weight: bold;
+  text-align:;
+  background-color: SlateBlue;
+
+}
+table.inner{
+  border: 0px
+
+}
+
+
+input {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 auto;
+
+   }
+</style>
+
+   
+       
+   
+ 
+</head>
+
+<body>
+
+<h2>Interview Feedback</h2>
+ 
+<table align="center" cellpadding = "10">
+
+<tr>
+<td>Primary Skills <br /><br /><br /><br /></td>
+ 
+<td>
+<table>
+ 
+<tr>
+<td align="center"><b>Sl.No.</b></td>
+<td align="center"><b>Primary Skills</b></td>
+<td align="center"><b>skil area</b></td>
+<td align="center"><b>Notes</b></td>
+<td align="center"><b>Rating</b></td>
+</tr>
+ 
+<tr>
+<td>1</td>
+<td>Java</td>
+<td><input type="text" name="ClassX_Board" maxlength="30" /></td>
+<td><input type="text" name="ClassX_Percentage" maxlength="30" /></td>
+<td><input type="text" name="ClassX_YrOfPassing" maxlength="30" /></td>
+</tr>
+ 
+<tr>
+<td>2</td>
+<td>DataBase</td>
+<td><input type="text" name="ClassXII_Board" maxlength="30" /></td>
+<td><input type="text" name="ClassXII_Percentage" maxlength="30" /></td>
+<td><input type="text" name="ClassXII_YrOfPassing" maxlength="30" /></td>
+</tr>
+ 
+<tr>
+<td>3</td>
+<td>Spring</td>
+<td><input type="text" name="Graduation_Board" maxlength="30" /></td>
+<td><input type="text" name="Graduation_Percentage" maxlength="30" /></td>
+<td><input type="text" name="Graduation_YrOfPassing" maxlength="30" /></td>
+</tr>
+ 
+
+ 
+
+</table>
+ 
+</td>
+</tr>
+ 
+
+</table><br>
+ 
+
+
+
+
+
+
+
+
+ 
+<table align="center" cellpadding = "10">
+ 
+<tr>
+<td>secondary Skills <br /><br /><br /><br /></td>
+ 
+<td>
+<table>
+ 
+<tr>
+<td align="center"><b>Sl.No.</b></td>
+<td align="center"><b>secondary Skills</b></td>
+<td align="center"><b>skil area</b></td>
+<td align="center"><b>Notes</b></td>
+<td align="center"><b>Rating</b></td>
+</tr>
+ 
+<tr>
+<td>1</td>
+<td>Message Queues</td>
+<td><input type="text" name="ClassX_Board" maxlength="30" /></td>
+<td><input type="text" name="ClassX_Percentage" maxlength="30" /></td>
+<td><input type="text" name="ClassX_YrOfPassing" maxlength="30" /></td>
+</tr>
+ 
+<tr>
+<td>2</td>
+<td>Design Patterns</td>
+<td><input type="text" name="ClassXII_Board" maxlength="30" /></td>
+<td><input type="text" name="ClassXII_Percentage" maxlength="30" /></td>
+<td><input type="text" name="ClassXII_YrOfPassing" maxlength="30" /></td>
+</tr>
+ 
+
+ 
+
+ 
+
+</table>
+ 
+</td>
+</tr>
+ 
+
+</table><br>
+ 
+<table align="center" cellpadding = "10">
+ 
+ 
+
+<tr>
+<td>Additional Skills<br /><br /><br /><br /><br /><br /><br /></td>
+ 
+<td>
+<table>
+ 
+<tr>
+<td align="center"><b>Sl.No.</b></td>
+<td align="center"><b>Additional Skills</b></td>
+<td align="center"><b>skil area</b></td>
+<td align="center"><b>Notes</b></td>
+<td align="center"><b>Rating</b></td>
+</tr>
+ 
+<tr>
+<td>1</td>
+<td>Communication</td>
+<td><input type="text" name="ClassX_Board" maxlength="30" /></td>
+<td><input type="text" name="ClassX_Percentage" maxlength="30" /></td>
+<td><input type="text" name="ClassX_YrOfPassing" maxlength="30" /></td>
+</tr>
+ 
+<tr>
+<td>2</td>
+<td>Process &Colloboration tools</td>
+<td><input type="text" name="ClassXII_Board" maxlength="30" /></td>
+<td><input type="text" name="ClassXII_Percentage" maxlength="30" /></td>
+<td><input type="text" name="ClassXII_YrOfPassing" maxlength="30" /></td>
+</tr>
+ 
+
+ 
+</table>
+ 
+</td>
+</tr>
+ 
+
+</table><br>
+
+<table align="center" cellpadding = "10">
+<tr>
+<td>Rejection/Promotion notes:</td>
+<td><input type="text" name="First_Name" maxlength="30"/>
+
+</td>
+</tr>
+ 
+
+<tr>
+<td>Time Spent by interviewer:</td>
+<td><input type="text" name="Time Spent by interviewer:" maxlength="30"/>
+
+</td>
+</tr>
+
+
+
+ 
+</td>
+
+</table><br><br>
+
+
+<table align="center" cellpadding = "10">
+<tr>
+<td>Is the candidate promoted ?:</td>
+<td>        
+<form action="/action_page.php">
+ 
+  <select id="cars" name="cars">
+    <option value="volvo">Yes</option>
+    <option value="saab">No</option>
+   
+   
+  </select>
+ 
+</form>
+
+</td>
+</tr>
+ 
+
+
+
+
+ 
+</td>
+</tr>
+
+
+</table><br><br>
+
+ <tr>
+<td colspan="2" align="center">
+<input type="submit" value="Submit">
+
+</td>
+</tr>
+
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Application Tracking System</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<style>
+		span.navigation {
+			color: #000000;
+			float: right;
+		}
+
+		/* unvisited link */
+		a.navigation:link {
+			color: #000000;
+			text-decoration: none;
+		}
+
+		/* unvisited link */
+		a.navigation:visited {
+			color: #000000;
+			text-decoration: none;
+		}
+
+		/* mouse over link */
+		a.navigation:hover {
+			color: #FF0000;
+			stext-decoration: none;
+		}
+
+		/* mouse over link */
+		a.navigation:active {
+			color: #FF0000;
+			text-decoration: none;
+		}
+
+		span.navigationSpace {
+			padding-left: 100px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<img src="https://ingrain.us/images/logo.png" alt="logo" class="img-responsive" width="180px" height="80px">
+		<marquee direction="right">
+			<div class="p-3 mb-2 bg-warning text-dark">
+				<H2>WELCOME TO INGRAIN SYSTEMS PRIVATE LIMITED!!!</H2>
+			</div>
+		</marquee>
+		<hr>
+		<center>
+
+			<H2>
+
+				<div class="p-3 mb-2 bg-secondary text-white"> HR feedback </div>
+			</h2>
+
+
+			<form action="#" th:action="@{/saveFeedback1}" th:object="${feedback1}" method="POST">
+
+
+				<input type="text" th:field="*{candidateName}" placeholder="Candidate Full Name"
+					class="form-control mb-4 col-4">
+
+				<input type="text" th:field="*{Jobtitle}" placeholder="Jobtitle" class="form-control mb-4 col-4">
+				<input type="text" th:field="*{InterviewerName}" placeholder="InterviewerName"
+					class="form-control mb-4 col-4">
+
+				<div class="row">
+
+
+					<div class="col">
+
+						<label for="">Evaluation Area:</label>
+					</div>
+
+
+
+
+					<div class="col">
+
+						<label for="">skill area:</label>
+
+					</div>
+
+
+					<div class="col">
+
+						<label for="">notes:</label>
+
+
+
+
+					</div>
+					<div class="col">
+
+						<label for="">rating:</label>
+
+
+					</div>
+
+				</div>
+
+
+				<div class="row">
+
+
+					<div class="col">
+						<input type="text" th:field="*{evaluationarea}" placeholder="Evaluation Area"
+							class="form-control mb-12 col-12">
+
+					</div>
+
+					<div class="col">
+						<input type="text" th:field="*{skillarea}" placeholder="skillarea"
+							class="form-control mb-12 col-12">
+
+					</div>
+					<div class="col">
+						<input type="text" th:field="*{notes}" placeholder="notes" class="form-control mb-12 col-12">
+					</div>
+
+
+
+					<select class="form-control mb-4 col-4" name="rating" required>
+						<option value="" selected hidden>On count of 5</option>
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+
+
+				</div>
+
+
+
+				<div class="row">
+
+
+					<div class="col">
+						<input type="text" th:field="*{evaluationarea1}" placeholder="Evaluation Area1"
+							class="form-control mb-12 col-12">
+					</div>
+
+					<div class="col">
+						<input type="text" th:field="*{skillarea1}" placeholder="skillarea"
+							class="form-control mb-12 col-12">
+					</div>
+
+
+
+					<div class="col">
+						<input type="text" th:field="*{notes1}" placeholder="notes" class="form-control mb-12 col-12">
+					</div>
+
+
+					<select class="form-control mb-4 col-4" name="rating1" required>
+						<option value="" selected hidden>On count of 5</option>
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+
+				</div>
+
+
+				<div class="row">
+
+
+					<div class="col">
+						<input type="text" th:field="*{evaluationarea2}" placeholder="Evaluation Area2"
+							class="form-control mb-12 col-12">
+					</div>
+
+					<div class="col">
+						<input type="text" th:field="*{skillarea2}" placeholder="skillarea"
+							class="form-control mb-12 col-12">
+					</div>
+
+
+
+					<div class="col">
+						<input type="text" th:field="*{notes2}" placeholder="notes" class="form-control mb-12 col-12">
+					</div>
+
+
+					<select class="form-control mb-4 col-4" name="rating2" required>
+						<option value="" selected hidden>On count of 5</option>
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+
+				</div>
+
+
+				<div class="row">
+
+
+					<div class="col">
+						<input type="text" th:field="*{evaluationarea3}" placeholder="Evaluation Area3"
+							class="form-control mb-12 col-12">
+					</div>
+
+					<div class="col">
+						<input type="text" th:field="*{skillarea3}" placeholder="skillarea"
+							class="form-control mb-12 col-12">
+					</div>
+
+
+
+					<div class="col">
+						<input type="text" th:field="*{notes3}" placeholder="notes" class="form-control mb-12 col-12">
+					</div>
+
+
+					<select class="form-control mb-4 col-4" name="rating3" required>
+						<option value="" selected hidden>On count of 5</option>
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+
+				</div>
+
+
+				<div class="row">
+
+
+					<div class="col">
+						<input type="text" th:field="*{evaluationarea4}" placeholder="Evaluation Area4"
+							class="form-control mb-12 col-12">
+					</div>
+
+					<div class="col">
+						<input type="text" th:field="*{skillarea4}" placeholder="skillarea"
+							class="form-control mb-12 col-12">
+					</div>
+
+
+
+					<div class="col">
+						<input type="text" th:field="*{notes4}" placeholder="notes" class="form-control mb-12 col-12">
+					</div>
+
+
+					<select class="form-control mb-4 col-4" name="rating4" required>
+						<option value="" selected hidden>On count of 5</option>
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+
+				</div>
+
+
+				<div class="row">
+
+
+					<div class="col">
+						<input type="text" th:field="*{evaluationarea5}" placeholder="other"
+							class="form-control mb-12 col-12">
+					</div>
+
+					<div class="col">
+						<input type="text" th:field="*{skillarea5}" placeholder="skillarea5"
+							class="form-control mb-12 col-12">
+					</div>
+
+
+
+					<div class="col">
+						<input type="text" th:field="*{notes5}" placeholder="notes5" class="form-control mb-12 col-12">
+					</div>
+
+
+					<select class="form-control mb-4 col-4" name="rating5" required>
+						<option value="" selected hidden>On count of 5</option>
+						<option value="0">0</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+
+				</div>
+
+
+				<label for="">Average Score:</label>
+				<select class="form-control mb-4 col-4" name="overallrating" required>
+					<option value="" selected hidden>On count of 5</option>
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+				</select>
+
+
+				<label for="">Candidates Scoring at least 4 Should be Promoted to next Level:<br> Is the Candidate
+					Promoted?</label>
+				<select class="form-control mb-4 col-4" name="result" required>
+					<option value="" selected hidden>Result</option>
+					<option>Yes</option>
+					<option>No</option>
+				</select>
+				<button type="submit" class="btn btn-info col-2"> Save HRFeedback</button>
+			</form>
+
+
+			<hr>
+			<footer>
+				<a th:href="@{/listofapplicants}"><b> Back to List of Applicants</b></a><span class="navigationSpace" />
+				<a th:href="@{/addfeedback}"><b> Return to add feedback</a></b><span class="navigationSpace" />
+
+				<a th:href="@{/dashboard}"> <b>Return to Dashboard</b></a>
+			</footer>
+
+
+</body>
+
+</html>

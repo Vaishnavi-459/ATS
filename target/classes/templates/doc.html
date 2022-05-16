@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+
+
+</head>
+
+
+
+
+		<div class="page-header">
+			<h1>Upload/Download Application</h1>
+		</div>
+       {maximumsize:1 MB}
+   <form id="uploadFiles" name="uploadFiles" method="post" th:action=@{/uploadFiles} encType="multipart/form-data">
+ 	  
+							
+								<label class="input-group-btn">   <input type="file" name="files" accept=".pdf" multiple required />
+
+							<input type="submit" id="btnUploadFile" value="Upload"
+								class="btn btn-primary" />
+						</div>
+						
+						<form>
+						</form>
+										<div th:if="${message}" th:text="${message}" class="alert alert-success" role="alert" id="divUploadSuccess">
+					Upload Success.
+				</div>
+				
+						</div>
+ 
+ 
+ 
+ 
+ 
+		
+<a th:href = "@{/dashboard}" class="btn btn-primary btn-sm mb-3"> Return to Dashboard </a>
+		
+		<a th:href = "@{/listofapplicants}" class="btn btn-primary btn-sm mb-3"> Return to List of Applicants</a>
+</body>
+</html>
